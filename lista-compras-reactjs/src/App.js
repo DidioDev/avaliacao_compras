@@ -66,6 +66,7 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
       <table className='table'>
         <thead> 
           <tr>
+            <td> Concluída </td>
             <td> Itens </td>
             <td> Configurações </td>
           </tr>
@@ -73,9 +74,9 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
         <tbody>
           {
             listaTarefa.map((tarefa, index) => ( 
-              <tr key={index}>
-                <td>{tarefa.descricao}</td> 
-                <td> 
+              <tr key={index}> <input type="checkbox" id="topping" name="topping" value="Paneer"/>
+                <td>{tarefa.descricao}</td>  
+                <td>
                     <button type="button" className="btn btn-warning" onClick={(event) => editar(tarefa)}>Editar</button>
                     <button type="button" className="btn btn-danger" onClick={(event) => excluir(tarefa)}>Excluir</button>     
                   </td>             
