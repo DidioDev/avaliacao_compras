@@ -76,8 +76,8 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
               <tr key={index}>
                 <td>{tarefa.descricao}</td> 
                 <td> 
-                    <button type="button" className="btn btn-warning" onClick={(event) => editar(tarefa)}>Editar</button>
-                    <button type="button" className="btn btn-danger" onClick={(event) => excluir(tarefa)}>Excluir</button>     
+                    <button type="button" className="btn1" onClick={(event) => editar(tarefa)}>Editar</button>
+                    <button type="button" className="btn2" onClick={(event) => excluir(tarefa)}>Excluir</button>     
                   </td>             
               </tr>
             ))
