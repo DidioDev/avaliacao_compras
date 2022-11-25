@@ -53,20 +53,21 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
       
     <form onSubmit={(event) => salvar (event)} >
       <div className="mb-3">
-        <h1>lista</h1>
-        <label className="form-label">escreva:</label>
+        <h1>LISTA DE COMPRAS</h1>
+        <label className="form-label">Adicione um item: </label>
         <input type="text" className="form-control" value={descricao} onChange={(event) => setDescricao(event.target.value)}/>
       </div>
       <button type="submit" className='btn btn-primary'>Adicionar</button>
 
     </form>
     <br/>
-      <h3>Tarefas adicionadas:</h3>
+      <h3>Itens adicionados:</h3>
 
       <table className='table'>
         <thead> 
           <tr>
-            <td>  Tarefa </td>
+            <td> Concluída </td>
+            <td> Itens </td>
             <td> Configurações </td>
           </tr>
         </thead>
@@ -75,9 +76,9 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
             listaTarefa.map((tarefa, index) => ( 
               <tr key={index}>
                 <td>{tarefa.descricao}</td> 
-                <td> 
-                    <button type="button" className="btn1" onClick={(event) => editar(tarefa)}>Editar</button>
-                    <button type="button" className="btn2" onClick={(event) => excluir(tarefa)}>Excluir</button>     
+                <td>  <input type="checkbox" id="topping" name="topping" value="Paneer"/>
+                <button type="button" className="btn1" onClick={(event) => editar(tarefa)}>Editar</button>
+                <button type="button" className="btn2" onClick={(event) => excluir(tarefa)}>Excluir</button>     
                   </td>             
               </tr>
             ))
