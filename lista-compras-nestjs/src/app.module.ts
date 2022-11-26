@@ -14,7 +14,7 @@ import { TarefaService } from './tarefa.service';
       port: 5432,
       username: 'postgres',
       password: 'ascent',
-      database: 'tarefa',
+      database: 'lista_compras',
       entities: [
         Tarefa
       ],

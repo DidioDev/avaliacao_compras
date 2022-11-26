@@ -25,7 +25,7 @@ AppModule = __decorate([
                 port: 5432,
                 username: 'postgres',
                 password: 'ascent',
-                database: 'tarefa',
+                database: 'lista_compras',
                 entities: [
                     tarefa_entity_1.Tarefa
                 ],
