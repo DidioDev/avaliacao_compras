@@ -22,7 +22,7 @@ __decorate([
     __metadata("design:type", String)
 ], Tarefa.prototype, "descricao", void 0);
 Tarefa = __decorate([
-    (0, typeorm_1.Entity)({ name: 'lista_itens' })
+    (0, typeorm_1.Entity)({ name: 'lista' })
 ], Tarefa);
 exports.Tarefa = Tarefa;
 //# sourceMappingURL=tarefa.entity.js.map

@@ -6,6 +6,7 @@ import { TarefaController } from './tarefa.controller';
 import { Tarefa } from './tarefa.entity';
 import { TarefaService } from './tarefa.service';
 
+//CONEXÃO COM O BANCO DE DADOS
 @Module({
   imports: [
     TypeOrmModule.forRoot({

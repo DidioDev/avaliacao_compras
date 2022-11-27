@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
 
+  //ARRAYS UTILIZADAS NO CÓDIGO
   const [codigo, setCodigo] = useState();
   const [descricao, setDescricao] = useState('');
   const [listaTarefa, setListaTarefa] = useState([]);
@@ -39,7 +40,7 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
   setCodigo(result.data.codigo)
   setDescricao(result.data.descricao)
 });
-  }
+  } 
 
   function excluir(tarefa){
     axios.delete(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {

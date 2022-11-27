@@ -1,7 +1,8 @@
 import { type } from "os";
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity({name: 'lista_itens'})
+//CONEXÃO COM AS TABELAS CRIADAS NO BANCO DE DADOS
+@Entity({name: 'lista'})
 export class Tarefa {
     @PrimaryGeneratedColumn({name:'codigo'})
     codigo?: number;
