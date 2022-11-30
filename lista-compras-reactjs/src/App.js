@@ -47,15 +47,17 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
     buscar();
     });
   }
-
+  //<input type="checkbox" id="topping" name="topping" value="Paneer"/>
+  //            <td> Concluída </td>
 
   return (
     <div className="container">
+    
       
     <form onSubmit={(event) => salvar (event)} >
       <div className="mb-3">
         <h1>LISTA DE COMPRAS</h1>
-        <label className="form-label">Adicione um item: </label>
+        <label className="form-label">Adicione um item a sua lista de compras: </label>
         <input type="text" className="form-control" value={descricao} onChange={(event) => setDescricao(event.target.value)}/>
       </div>
       <button type="submit" className='btn btn-primary'>Adicionar</button>
@@ -66,18 +68,18 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
 
       <table className='table'>
         <thead> 
-          <tr>
-            <td> Concluída </td>
-            <td> Itens </td>
-            <td> Configurações </td>
-          </tr>
-        </thead>
-        <tbody>
+          <tr className="tables">
+            <td> Nome do Item: </td> 
+            <td className="config"> Configurações do Item: </td>
+          </tr> 
+        </thead> 
+        <tbody> 
           {
-            listaTarefa.map((tarefa, index) => ( 
-              <tr key={index}> <input type="checkbox" id="topping" name="topping" value="Paneer"/>
-                <td>{tarefa.descricao}</td>  
-                <td>
+            listaTarefa.map((tarefa, index) => (
+              <tr key={index}> 
+                <td>{tarefa.descricao}</td>
+                <td className="buttons"> 
+                    <input type="checkbox" className="checkbox"/>
                     <button type="button" className="btn btn-warning" onClick={(event) => editar(tarefa)}>Editar</button>
                     <button type="button" className="btn btn-danger" onClick={(event) => excluir(tarefa)}>Excluir</button>     
                   </td>             
