@@ -70,7 +70,7 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
         <thead> 
           <tr className="tables">
             <td> Nome do Item: </td> 
-            <td className="config"> Configurações do Item: </td>
+            <td className="config"> Concluído &nbsp;&nbsp;/ &nbsp;&nbsp;Configurações do Item: </td>
           </tr> 
         </thead> 
         <tbody> 
