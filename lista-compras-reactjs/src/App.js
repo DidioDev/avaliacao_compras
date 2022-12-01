@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
+import logo from '../src/assets/logo.png';
+import logo2 from '../src/assets/logo2.png';
 
 function App() {
 
@@ -47,16 +49,14 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
     buscar();
     });
   }
-  //<input type="checkbox" id="topping" name="topping" value="Paneer"/>
-  //            <td> Concluída </td>
+
+
 
   return (
     <div className="container">
-    
-      
     <form onSubmit={(event) => salvar (event)} >
       <div className="mb-3">
-        <h1>LISTA DE COMPRAS</h1>
+      <h1 className="mercado-fema"><img src={logo} className="logo"></img>MERCADO FEMA</h1>
         <label className="form-label">Adicione um item a sua lista de compras: </label>
         <input type="text" className="form-control" value={descricao} onChange={(event) => setDescricao(event.target.value)}/>
       </div>
@@ -64,7 +64,7 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
 
     </form>
     <br/>
-      <h3>Itens adicionados:</h3>
+      <h3 className="itens-add">Itens adicionados:</h3>
 
       <table className='table'>
         <thead> 

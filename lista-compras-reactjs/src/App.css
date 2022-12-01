@@ -20,5 +20,41 @@ h3{
     margin-right: 30px;
 }
 
-.tables{
+.logo{
+    width: 110px;
+    height: 110px;
+    
+}
+
+.logo-titulo{
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 5px;
+}
+
+.container{
+    padding-top: 36px;
+}
+
+.mercado-fema{
+    display: flex;
+    padding-top: 3px;
+    align-items: center;
+}
+
+.form-label{
+    padding-top: 21px;
+    font-size: 20px;
+}
+
+.form-control{
+    width: 1299px;
+    height: 40px;
+    display: flex;
+    margin-top: 6px;
+}
+
+.itens-add{
+    display: flex;
+    margin-top: 15px;
 }
