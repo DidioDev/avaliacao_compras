@@ -60,8 +60,9 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
         <label className="form-label">Adicione um item a sua lista de compras: </label>
         <input type="text" className="form-control" value={descricao} onChange={(event) => setDescricao(event.target.value)}/>
       </div>
+      <div className="button-add">
       <button type="submit" className='btn btn-primary'>Adicionar</button>
-
+      </div>
     </form>
     <br/>
       <h3 className="itens-add">Itens adicionados:</h3>
@@ -70,7 +71,7 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
         <thead> 
           <tr className="tables">
             <td> Nome do Item: </td> 
-            <td className="config"> Concluído &nbsp;&nbsp;/ &nbsp;&nbsp;Configurações do Item: </td>
+            <td className="config"> Concluídas &nbsp;&nbsp;/ &nbsp;&nbsp;Configurações do Item: </td>
           </tr> 
         </thead> 
         <tbody> 

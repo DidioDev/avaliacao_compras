@@ -11,7 +11,7 @@ h3{
 
 .checkbox{
     display: flex;
-    margin-right: 92px;
+    margin-right: 99px;
     width: 23px;
 }
 
@@ -51,7 +51,7 @@ h3{
     width: 1299px;
     height: 40px;
     display: flex;
-    margin-top: 6px;
+    margin-top: 7px;
 }
 
 .itens-add{
@@ -62,4 +62,9 @@ h3{
 
 .table{
     font-size: 18px;
+}
+
+.button-add{
+    display: flex;
+    margin-top: 19px;
 }
