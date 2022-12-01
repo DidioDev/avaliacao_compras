@@ -18,11 +18,11 @@ __decorate([
     __metadata("design:type", Number)
 ], Tarefa.prototype, "codigo", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'descricao', type: 'varchar', length: 255 }),
+    (0, typeorm_1.Column)({ name: 'item', type: 'varchar', length: 255 }),
     __metadata("design:type", String)
 ], Tarefa.prototype, "descricao", void 0);
 Tarefa = __decorate([
-    (0, typeorm_1.Entity)({ name: 'lista' })
+    (0, typeorm_1.Entity)({ name: 'lista_compras' })
 ], Tarefa);
 exports.Tarefa = Tarefa;
 //# sourceMappingURL=tarefa.entity.js.map

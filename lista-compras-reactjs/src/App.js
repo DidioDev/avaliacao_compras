@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
 import logo from '../src/assets/logo.png';
-import logo2 from '../src/assets/logo2.png';
 
 function App() {
 
