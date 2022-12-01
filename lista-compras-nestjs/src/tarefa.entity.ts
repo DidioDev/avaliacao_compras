@@ -1,7 +1,7 @@
 import { type } from "os";
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-//CONEXÃO COM AS TABELAS CRIADAS NO BANCO DE DADOS
+//TABELAS QUE VÃO SER USADAS NO DBEAVER
 @Entity({name: 'lista_compras'})
 export class Tarefa {
 

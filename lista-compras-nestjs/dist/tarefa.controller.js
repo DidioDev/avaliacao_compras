@@ -33,7 +33,7 @@ let TarefaController = class TarefaController {
     }
     async salvarTarefa(tarefa) {
         await this.tarefaService.salvar(tarefa);
-        return 'Salvo';
+        return 'Seu item foi salvo na lista!';
     }
 };
 __decorate([

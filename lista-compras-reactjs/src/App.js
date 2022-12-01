@@ -14,6 +14,8 @@ function App() {
       buscar();
   }, []);
 
+
+  //FAZ A FUNÇÃO DE BUSCAR O ITEM NA LISTA /TAREFA
   function buscar(){
     axios.get('http://localhost:3100/tarefa').then(resultado => {
       console.log(resultado.data);
@@ -21,6 +23,8 @@ function App() {
   })
   }
 
+
+  //FAZ A FUNÇÃO DE SALVAR UM ITEM NA LISTA, COM CÓDIGO E NOME
   function salvar(event){
     event.preventDefault();
 
@@ -28,6 +32,7 @@ function App() {
       codigo: codigo,
       descricao: descricao
     };
+    //APÓS SALVAR O ITEM, ELE MANDA PRA LISTA
     axios.put('http://localhost:3100/tarefa', tarefa).then(() => {
       buscar();
 
@@ -36,6 +41,8 @@ function App() {
     })
   }
 
+
+  //A FUNÇÃO EDITAR PUXA O ITEM SELECIONADO PELO CÓDIGO, E COM ISSO VOLTA PARA CAIXA DE TEXTO PRONTA
   function editar (tarefa){
 axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
   setCodigo(result.data.codigo)
@@ -43,14 +50,15 @@ axios.get(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
 });
   } 
 
+
+  //A FUNÇÃO EXCLUIR APAGA O ITEM NA LISTA PELO CÓDIGO
   function excluir(tarefa){
     axios.delete(`http://localhost:3100/tarefa/${tarefa.codigo}`).then((result) => {
     buscar();
     });
   }
 
-
-
+  //HTML
   return (
     <div className="container">
     <form onSubmit={(event) => salvar (event)} >

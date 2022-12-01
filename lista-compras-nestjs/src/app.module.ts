@@ -19,6 +19,7 @@ import { TarefaService } from './tarefa.service';
       entities: [
         Tarefa
       ],
+      //TEM A FUNÇÃO DE CRIAR E ATUALIZAR AS INFORMAÇÕES NO BANCO DE DADOS INSTANTANEAMENTE
       synchronize: true
     }),
     TypeOrmModule.forFeature([Tarefa])],

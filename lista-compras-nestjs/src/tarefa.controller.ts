@@ -10,6 +10,7 @@ export class TarefaController {
         private tarefaService: TarefaService
     ) {}
     
+    //O @GET VAI BUSCAR OS RECURSOS EM /TAREFA E /TAREFA/:CODIGO
     @Get('/tarefa') 
     async listaTarefa() : Promise<Tarefa[]> {
         return await this.tarefaService.findAll();
@@ -19,19 +20,22 @@ export class TarefaController {
     @Get('/tarefa/:codigo')
     async buscarPorId(@Param () parametro) {
         console.log(parametro.codigo);
-
         return await this.tarefaService.findById(parametro.codigo);
     }
 
+
+    //EXCLUI ALGUM RECURSO DA /TAREFA/:CODIGO
     @Delete('/tarefa/:codigo')
     async excluirTarefa(@Param() parametro) {
         await this.tarefaService.excluir(parametro.codigo);
         return "ok";
     }
 
+
+    //INSERE E ATUALIZA ALGUM RECURSO NO /TAREFA
     @Put('/tarefa')
     async salvarTarefa(@Body() tarefa) {
         await this.tarefaService.salvar(tarefa);
-        return 'Salvo';
+        return 'Seu item foi salvo na lista!';
     }
 }
